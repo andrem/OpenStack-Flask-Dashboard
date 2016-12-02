@@ -1,6 +1,8 @@
 {% extends "layout.html" %}
 {% block body %}
 
+<h1>Instance List</h1>
+
 {% for vm in instances %}
 	{{ vm.name }} | {{ vm.status }}  <br />
 {% endfor %}
