@@ -28,8 +28,8 @@ def index_default():
 def instances_list():
     return render_template('instances_list.html', instances=nc.servers.list()) 
 
-@app.route('/instance/show')
-def instance_show():
+@app.route('/instance/show/<id>')
+def instance_show(id):
     return render_template('instance_show.html')
 
 if __name__ == '__main__':
