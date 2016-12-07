@@ -1,6 +1,4 @@
-import libvirt
 import os
-import sys
 
 from novaclient import client
 from novaclient import utils
