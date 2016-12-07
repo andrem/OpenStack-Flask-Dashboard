@@ -22,7 +22,7 @@ nc = client.Client(**credentials)
 
 @app.route('/')
 def index_default():
-    return render_template('index_default.html')
+    return render_template('index_default.html', projectid=nc.projectid)
 
 @app.route('/hypervisor/list')
 def hypervisor_list(hypervisors=None):
