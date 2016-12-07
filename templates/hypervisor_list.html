@@ -1,9 +1,15 @@
 {% extends "layout.html" %}
 {% block body %}
 
-<h1> Hypervisor List </h1>
-{% for h in hypervisors %}
-	{{ h.hypervisor_hostname }} | {{ h.host_ip }} | {{ h.status }} <br />
-{% endfor %}
+<div class="header">
+        <h1>Instance List</h1>
+</div>
+
+<div class="content">
+
+	{% for h in hypervisors %}
+		{{ h.hypervisor_hostname }} | {{ h.host_ip }} | {{ h.status }} <br />
+	{% endfor %}
+</div>
 
 {% endblock %}

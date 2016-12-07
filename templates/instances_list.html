@@ -2,10 +2,12 @@
 {% block body %}
 
 <div class="header">
-        <h1>Simple OpenStack Flask Dashoboard!</h1>
-</div>
-<div class="content">
-	None
+	<h1>Instance List</h1>
 </div>
 
+<div class="content">
+	{% for vm in instances %}
+		{{ vm.name }} | {{ vm.status }}  <br />
+	{% endfor %}
+</div>
 {% endblock %}

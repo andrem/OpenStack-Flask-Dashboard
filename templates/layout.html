@@ -1,26 +1,54 @@
 <!doctype html>
+<html lang="en">
 <title>OpenStack Flask Dashboard</title>
 <head>
+	<meta charset="utf-8">
+	<style rel="stylesheet" type="text/css">
+	<;!--
+		body {
+			color: #777;
+		}
 
-<style rel="stylesheet" type="text/css">
-<;!--
-	body { background #000; }
-	h1 {
-		color: #6666ff;
-		font: bold 25pt Verdana, Sans-serif;
-		border-bottom: 1px solid #6666ff;
-	}
+		#layout {
+			position: relative;
+			padding-left: 0;
+		}
 
-	#container {
-		padding: 2px;
-		margin: 0px;
-	}
--->
-</style>
+		.header {
+     			margin: 0;
+     			color: #333;
+     			text-align: center;
+     			padding: 2.5em 2em 0;
+     			border-bottom: 1px solid #eee;
+ 		}
+
+		.header h1 {
+			margin: 0.2em 0;
+			font-size: 3em;
+			font-weight: 300;
+		}
+
+		.content {
+    			margin: 0 auto;
+    			padding: 0 2em;
+    			max-width: 800px;
+    			margin-bottom: 50px;
+    			line-height: 1.6em;
+		}
+
+	-->
+	</style>
 
 </head>
 <body>
-	<div id="container">
+	<div id="layout">
+		<div id="menu">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="/instances/list">Instances List</a></li>
+				<li><a href="/hypervisor/list">Hypervisor List</a></li>
+			</ul>
+		</div>
 		{% block body %}{% endblock %}
 	</div>
 </body>
