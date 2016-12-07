@@ -20,6 +20,10 @@ def get_nova_credentials_v2():
 credentials = get_nova_credentials_v2()
 nc = client.Client(**credentials)
 
+@app.route('/')
+def index_default():
+    return render_template('index_default.html')
+
 @app.route('/hypervisor/list')
 def hypervisor_list(hypervisors=None):
     return render_template('hypervisor_list.html', hypervisors=nc.hypervisors.list()) 
