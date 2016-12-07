@@ -6,8 +6,10 @@
 </div>
 
 <div class="content">
+	<ul>
 	{% for vm in instances %}
-		{{ vm.name }} | {{ vm.status }}  <br />
+		<li><a href="/instance/show/{{ vm.id }}">{{ vm.name }}</a></li>
 	{% endfor %}
+	</ul>
 </div>
 {% endblock %}
