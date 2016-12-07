@@ -24,10 +24,6 @@ nc = client.Client(**credentials)
 def index_default():
     return render_template('index_default.html', projectid=nc.projectid)
 
-@app.route('/hypervisor/list')
-def hypervisor_list(hypervisors=None):
-    return render_template('hypervisor_list.html', hypervisors=nc.hypervisors.list()) 
-
 @app.route('/instances/list')
 def instances_list():
     return render_template('instances_list.html', instances=nc.servers.list()) 
